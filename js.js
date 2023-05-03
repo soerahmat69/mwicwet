@@ -89,10 +89,14 @@ function loadData() {
 }
 
 function sendChat() {
+  if (username == ""){
+    alert("masukan username github")
+  }else{
   var xhr = new XMLHttpRequest();
   var url = "https://asia-south1.gcp.data.mongodb-api.com/app/ngajax_chat-jttwr/endpoint/postjax";
   let chat = document.getElementById("chat")
 
+  
   var data = JSON.stringify({
       username: username,
       logs_chat: chat.value
@@ -143,7 +147,7 @@ element.scrollTop = element.scrollHeight;
 
   xhr.send(data);
   return false;
-}
+  }}
 
 function clearReturn() {
   document.getElementById("return").innerHTML = "";
