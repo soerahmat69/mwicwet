@@ -144,10 +144,27 @@ element.scrollTop = element.scrollHeight;
               console.log("ga");
             }}
   };
-
   xhr.send(data);
   return false;
   }}
+
+  var buttons = document.getElementById("toggle-button")
+  var does_b = true
+  var menu = document.getElementById("react-toggle")
+
+  buttons.addEventListener("click",function(){
+   
+    
+    if(does_b){
+      menu.classList.remove("sml-hd")
+      does_b = false
+    }else{
+      menu.classList.add("sml-hd")
+      does_b = true
+    }
+
+
+  })
 
 function clearReturn() {
   document.getElementById("return").innerHTML = "";

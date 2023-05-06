@@ -7,13 +7,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Learn ngAJAX</title>
   <script src="https://cdn.tailwindcss.com"></script>
+ <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+ <style>
+    @media (min-width: 120px){
+      .sml-sc{
+        flex-direction: column;
+      }
+      .sml-hd{
+        display: none;
+      }
+    }
+    
+  </style>
 </head>
 
 <body class="px-[10px] bg-[#E5E1E1]">
+
+  <!-- prefix -->
+
+  
+
+  <!-- prefix -->
   <nav class="min-w-max min-w-max min-h-max">
-    <ul class="flex my-4 rounded-md gap-4 w-full justify-between py-[10px] bg-slate-900 text-white px-[60px]">
-      <li class="font-extrabold text-[20px] tracking-[1px]">ngAJAX</li>
-      <ul class="flex gap-4 items-center">
+    <ul class="md:flex  my-4 rounded-md gap-4  w-full md:justify-between py-[10px] bg-slate-900 text-white px-[60px]">
+      <li><ul class="flex justify-between">
+        <li class="font-extrabold text-[20px] tracking-[1px]">ngAJAX</li>
+      <button id="toggle-button"  class="md:hidden min-w-max flex items-center"><ion-icon class="text-[30px]" name="menu"></ion-icon>
+      </button>
+      </ul></li>
+      <ul id="react-toggle" class="transition-all duration-1000 ease-in md:flex gap-4  sml-hd  md:items-center sm:flex-col sml-sc md:flex-row">
         <li class="">
           <a class="hover:text-sky-500 active:text-sky-500 font-semibold focus:text-sky-500"
             href="./index.html">Home</a>
@@ -21,7 +43,7 @@
 
         <li class="hover:text-sky-500 font-semibold">Production</li>
         <li class="hover:text-sky-500 font-semibold">About</li>
-        <li>
+        <li class="md:my-0 sm:my-2">
           <a href="http://github.com/soerahmat69" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 16 16" class="w-5 h-5" fill="currentColor" aria-hidden="true">
               <path
@@ -29,7 +51,7 @@
               </path>
             </svg></a>
         </li>
-        <li>
+        <li class="md:my-0 sm:my-2">
           <a href="http://github.com/soerahmat69" target="_blank" rel="noopener noreferrer">
             <svg width="23" height="24" fill="currentColor">
               <path
@@ -41,8 +63,11 @@
             </svg></a>
         </li>
       </ul>
+      
     </ul>
   </nav>
+
+  
   <main class="w-full min-h-max rounded-md bg-slate-900">
     <div class="relative overflow-hidden text-white h-[300px] flex items-center">
       <div class="flex flex-col w-full ml-[40px]">
@@ -83,7 +108,7 @@
 
   <div class="my-4 bg-slate-900 py-7 rounded-md">
     <h1 class="mb-7 text-white font-semibold text-[20px] ml-[50px]">
-      Post <span class="font-extrabold">XHR</span> api from github
+      Post <span class="font-extrabold">XHR</span> api from me
     </h1>
     <div class="flex justify-center min-w-max  flex-col items-center overflow-hidden">
       <ul class="bg-white w-2/4 h-[200px] rounded-md px-4 py-3 overflow-auto" id="load-chat" >
@@ -118,32 +143,18 @@
     </div>
   </div>
   
-  <footer class="my-4 bg-slate-900 py-7 rounded-md">
+  <footer class="my-4 px-4 bg-slate-900 py-7 rounded-md">
     <div class=" ml-[40px] my-4   max-w-min">
      <div class="text-white  ">
       <h1 class="text-[20px] font-semibold my-3">gabutz.</h1> 
-      <a href="">gayakin</a>
-       <a href="">sokin</a>
-       <a href="">aja braders</a>
+      <a class="text-slate-400 text-[15px]" href="">gayakin</a>
+       <a class="text-slate-400 text-[15px]" href="">sokin</a>
+       <a class="text-slate-400 text-[15px]" href="">aja braderz</a>
      </div>
-     <!-- <div class="text-white">
-      <a href="">gayakin</a>
-      <a href="">sokin</a>
-      <a href="">aja braders</a>
-    </div>
-    <div class="text-white">
-      <a href="">gayakin</a>
-      <a href="">sokin</a>
-      <a href="">aja braders</a>
-    </div>
-    <div class="text-white">
-      <a href="">gayakin</a>
-      <a href="">sokin</a>
-      <a href="">aja braders</a>
-    </div> -->
+   
     </div>
     <hr >
-    <h1 class="text-white ml-[40px] font-extrabold text-[40px]">NgAjax</h1>
+    <h1 class="tracking-[2px] text-white ml-[40px] font-extrabold text-[40px]">ngAJAX</h1>
  </footer>
 
   <script src="./js.js"></script>
