@@ -153,7 +153,7 @@ element.scrollTop = element.scrollHeight;
   var menu = document.getElementById("react-toggle")
 
   buttons.addEventListener("click",function(){
-   
+   console.log("same")
     
     if(does_b){
       menu.classList.remove("sml-hd")
